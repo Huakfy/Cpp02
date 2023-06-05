@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 12:26:37 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/05 14:01:35 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/05 14:47:41 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ Fixed::Fixed(const int nb) {
 	this->setRawBits(nb << _fract);
 	return;
 }
-#include <cstdio>
+
 Fixed::Fixed(const float nb) {
 	std::cout << "Float constructor called" << std::endl;
 	this->_value = roundf(nb * (1 << _fract));
