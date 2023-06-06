@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:06:56 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/06 10:28:30 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/06 11:33:51 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ class Point {
 		Fixed	getY();
 };
 
-bool	bsp(Point v1, Point v2, Point v3, Point pt);
+bool	bsp(Point const v1, Point const v2, Point const v3, Point const pt);
 
 #endif
