@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:06:48 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/06 11:28:07 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/06 11:30:53 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Fixed	sign(Point p1, Point p2, Point p3) {
 	return ((p1.getX() - p3.getX()) * (p2.getY() - p3.getY()) - (p2.getX() - p3.getX()) * (p1.getY() - p3.getY()));
 }
 
-bool	bsp(Point v1, Point v2, Point v3, Point pt) {
+bool	bsp(Point const v1, Point const v2, Point const v3, Point const pt) {
 	Fixed	d1, d2, d3;
 	bool	has_neg, has_pos;
 
