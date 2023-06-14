@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 12:26:37 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/05 16:08:30 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/14 15:01:28 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ Fixed::Fixed(const int nb) {
 	this->setRawBits(nb << _fract);
 	return;
 }
-#include <cstdio>
+
 Fixed::Fixed(const float nb) {
 	//std::cout << "Float constructor called" << std::endl;
 	this->_value = roundf(nb * (1 << _fract));
@@ -125,6 +125,10 @@ Fixed	Fixed::operator*(Fixed const &fixed) {
 Fixed	Fixed::operator/(Fixed const &fixed) {
 	Fixed	ret;
 
+	if (ret == fixed) {
+		std::cout << "division by 0" << std::endl;
+		return (ret);
+	}
 	ret.setRawBits((this->_value << this->_fract) / fixed._value);
 	return (ret);
 }

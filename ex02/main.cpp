@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:27:27 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/05 15:56:30 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/14 14:58:47 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ int	main(void) {
 	std::cout << b << std::endl;
 
 	std::cout << Fixed::max( a, b ) << std::endl;
+
+	Fixed c(0);
+	Fixed d(1);
+
+	std::cout << d / c << std::endl;
 
 	return 0;
 }
