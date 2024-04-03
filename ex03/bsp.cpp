@@ -6,14 +6,13 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:06:48 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/06 11:30:53 by mjourno          ###   ########.fr       */
+/*   Updated: 2024/04/03 18:46:05 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Point.hpp"
 
-//https://stackoverflow.com/questions/17692922/check-is-a-point-x-y-is-between-two-points-drawn-on-a-straight-line
 float	distance(Point p1, Point p2) {
 	return sqrt(pow(p2.getX().toFloat() - p1.getX().toFloat(), 2) + pow(p2.getY().toFloat() - p1.getY().toFloat(), 2) * 1.0);
 }
@@ -24,7 +23,6 @@ bool	pointIsOnEdge(Point v1, Point v2, Point pt) {
 	return (false);
 }
 
-//https://stackoverflow.com/questions/2049582/how-to-determine-if-a-point-is-in-a-2d-triangle
 Fixed	sign(Point p1, Point p2, Point p3) {
 	return ((p1.getX() - p3.getX()) * (p2.getY() - p3.getY()) - (p2.getX() - p3.getX()) * (p1.getY() - p3.getY()));
 }
